@@ -3,13 +3,6 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Preparation SCM') {
-            steps {
-                // Get some code from a GitHub repository
-                git 'https://github.com/josephc69/jenkins-stage-demo.git'
-            }
-        }
     
         stage('Build') {
             steps {
@@ -19,8 +12,9 @@ pipeline {
     
         stage('Test') {
             steps {
-                echo 'Testing the application'
+                echo 'Testing the Code'
             }
+
         stage('Deploy') {
             steps {
                 echo 'Deploying the application'
