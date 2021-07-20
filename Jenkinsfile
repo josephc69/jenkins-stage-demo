@@ -1,26 +1,32 @@
 pipeline {
+
     agent any
 
     stages {
+        
         stage('Preparation') {
             steps {
-                echo 'Hello Preparation stage'
+                echo 'Preparation stage'
             }
         }
     }
   
-    stages {
         stage('Build') {
             steps {
-                echo 'Hello Buld stage'
+                echo 'Building the application'
             }
         }
     }
     
-    stages {
-        stage('Post') {
+        stage('Test') {
             steps {
-                echo 'Hello Post stage'
+                echo 'Testing the application'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application'
             }
         }
     }
