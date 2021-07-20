@@ -4,9 +4,10 @@ pipeline {
 
     stages {
 
-        stage('Preparation') {
+        stage('Preparation SCM') {
             steps {
-                echo 'Preparation stage'
+                // Get some code from a GitHub repository
+                git 'https://github.com/josephc69/jenkins-stage-demo.git'
             }
         }
     
